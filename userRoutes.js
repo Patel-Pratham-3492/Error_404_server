@@ -81,6 +81,7 @@ router.post("/check_waiterid", async (req, res) => {
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
+  port: 587, 
   auth: {
     user: process.env.RESTAURANT_EMAIL,
     pass: process.env.RESTAURANT_EMAIL_PASSWORD,
